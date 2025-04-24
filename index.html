@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Doto:wght@100..900&family=Jersey+15&family=Lexend:wght@100..900&family=Lilita+One&family=Pixelify+Sans:wght@400..700&family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&family=Silkscreen:wght@400;700&family=Workbench&display=swap" rel="stylesheet">
+</head>
+
+ <style>
+
+ 	 body {
+                    background-image: url(https://vol.co/cdn/shop/files/Night_waneella.gif?v=1697101501&width=2500);
+                    background-repeat: no repeat;
+                    background-size: cover;
+                    background-attachment: fixed;
+        #leftbox {
+            float: left;
+        
+            width: 25%;
+            height: 280px;
+
+        }
+
+        #middlebox {
+            float: left;
+         
+            width: 50%;
+            height: 280px;
+        }
+
+        #rightbox {
+            float: right;
+            
+            width: 25%;
+            height: 280px;
+        }
+
+        h1 {
+            color: green;
+            text-align: center;
+        }
+    </style>
+
+<body>
+
+
+	 <div style="background-color: rgba(0, 0, 0, 0.5);
+                    font-family: Lexend;
+                    width: 1400px;
+                    height: 900px;
+                    padding: 10px;
+                    border-color: white;
+                    border-radius: 12px;
+                    box-shadow: 2px 2px 5px rgb(0,0,0, 0.7);
+                    margin: auto;
+                    text-align: center;" class="container2">
+
+
+<p style="text-align: center; font-size: 85px; color: white;"> Score Analyzer </p>
+
+          
+              <div id="boxes">
+
+    <div id="leftbox">
+                   				  <br>
+
+                   				  
+<img src="1.png" alt="math" style="height: 385px; width:300px;"> <br> <br>
+
+<p style="text-align: center; font-size: 20px; color: white;"> Enter Math grade here </p>
+<br>
+                   				<form>   <input style="width: 135px;" type="number" class="form-control" id="MATH">
+
+                   				</div>
+
+                   				     <div id="middlebox">
+
+                   				     	<img src="2.png" alt="sci" style="height: 385px; width:300px;"> <br> <br>
+
+<p style="text-align: center; font-size: 20px; color: white;"> Enter SS grade here </p>
+<br>
+                   				<form>   <input style="width: 135px;" type="number" class="form-control" id="SS">
+
+                   				</div>
+
+                   				        <div id="rightbox">
+
+                   				        	<img src="3.png" alt="ss" style="height: 400px; width:300px;"> <br> <br>
+<p style="text-align: center; font-size: 20px; color: white;"> Enter Science grade here </p>
+<br>
+                   				  <form> 	<input style="width: 135px;" type="number" class="form-control" id="SCI">
+    
+    <br> <br>
+
+     		</div>
+     			</div>
+     		</div>
+
+     			<br>
+
+<center>
+    								   <button style="height: 100px; width: 150px" id="button" type="submit" class="btn btn-success" onclick="averaging()"> Get Rating </button> </form>
+</center>
+    							
+
+
+
+    						
+<script>
+
+function averaging(){
+
+        var MATH = Number(document.getElementById("MATH").value);
+        var SS = Number(document.getElementById("SS").value);
+        var SCI = Number(document.getElementById("SCI").value);
+        var averag = (MATH + SS + SCI) / 3 ;
+        var average = averag.tofixed(1);
+
+		switch(true){
+			case (average >= 75 && average <= 79.99):
+				alert("Average" + " - " + "Needs Improvement");
+				break;
+			case (average >= 80 && average <= 86.99):
+				alert("Average" + " - " + "Satisfactory");
+				break;
+			case (average >= 87 && average <= 93.99):
+				alert("Average" + " - " + "Above Satisfactory");
+				break;
+			case (average >= 94 && average <= 100):
+				alert("Average" + " - " + "Excellent");
+				break;
+			default:
+				alert("You have not inputed a value!");
+		}
+}
+
+</script>
+</div>
+
+</script>
+</body>
+</html>
