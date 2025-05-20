@@ -117,7 +117,7 @@ function averaging(){
         var SS = Number(document.getElementById("SS").value);
         var SCI = Number(document.getElementById("SCI").value);
         var averag = (MATH + SS + SCI) / 3 ;
-        var average = averag.tofixed(1);
+        var average = averag.toFixed(1);
 
 		switch(true){
 			case (average >= 75 && average <= 79.99):
